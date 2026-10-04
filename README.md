@@ -1,16 +1,47 @@
-# React + Vite
+# Viajes Travel — Trabajo Final, Opción A
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Migración de mi sitio original de HTML y CSS a React,
+conservando sus imágenes, contenido y estilos.
 
-Currently, two official plugins are available:
+## Tecnologías
+React, Vite, JavaScript, CSS y React Router DOM.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Contenido
+- Inicio.
+- Destinos nacionales y galería.
+- Páginas de Jujuy, El Chaltén, El Calafate y Buenos Aires.
+- Sobre mí.
+- Contacto.
 
-## React Compiler
+## Componentes
+Navbar, Layout, Card, Gallery, Contact y Footer.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Card recibe los datos de cada destino mediante props.
+Layout recibe el contenido mediante children.
 
-## Expanding the ESLint configuration
+## Formulario
+Utiliza useState para controlar los campos.
+Los cambios de los inputs y los datos del envío aparecen en consola.
+El envío utiliza preventDefault y el botón Limpiar vacía los campos.
+No envía correos ni se conecta a un servidor.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Cómo ejecutar
+Se necesita Node.js y npm.
+
+Dentro de la carpeta del proyecto:
+
+```bash
+npm install
+npm run dev
+```
+
+Abrir la dirección que indique la terminal.
+
+## Verificación
+```bash
+npm run build
+npm run lint
+```
+
+## Sitio original
+https://novasystems32.github.io/Viajes-Travel/
