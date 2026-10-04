@@ -1,0 +1,751 @@
+/* =========================
+CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #90aed1;
+    --azul-oscuro: #6f8fb5;
+    --marron: #6f4e37;
+    --marron-oscuro: #8b470f;
+    --blanco: #ffffff;
+    --fondo: #f5f5f5;
+    --texto: #333333;
+
+    --fuente-titulos: "Fraunces", serif;
+    --fuente-textos: "Poppins", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: var(--fuente-textos);
+}
+
+main {
+    flex: 1;
+}
+
+/* =========================
+ENCABEZADO
+========================= */
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+
+    background-color: var(--azul);
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo i {
+    font-size: 2rem;
+}
+
+/* Menú */
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    list-style: none;
+}
+
+.navbar ul a {
+    color: var(--blanco);
+    font-size: 1.1rem;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: color 0.3s;
+}
+
+.navbar ul a:hover {
+    color: #ffe6b7;
+}
+
+/* =========================
+PORTADA DEL INICIO
+========================= */
+
+.portada {
+    width: 100%;
+    height: calc(100vh - 86px);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.portada img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+}
+
+/* Oscurece un poco la fotografía */
+
+.portada::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Texto sobre la fotografía */
+
+.portada-texto {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+
+    max-width: 600px;
+
+    color: var(--blanco);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.portada-texto h1 {
+    margin-bottom: 20px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 3.5rem;
+}
+
+.portada-texto p {
+    margin-bottom: 30px;
+
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.boton-portada {
+    display: inline-block;
+    padding: 13px 28px;
+
+    background-color: var(--azul);
+    color: var(--blanco);
+
+    border-radius: 7px;
+
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.boton-portada:hover {
+    background-color: var(--azul-oscuro);
+}
+
+/* =========================
+SOBRE MÍ
+========================= */
+
+.sobre-mi {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 60px auto;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre-mi-imagen {
+    width: 50%;
+}
+
+.sobre-mi-imagen img {
+    width: 100%;
+    height: 450px;
+
+    display: block;
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-mi-texto {
+    width: 50%;
+}
+
+.sobre-mi-texto h1 {
+    margin-bottom: 25px;
+
+    color: var(--marron-oscuro);
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+}
+
+.sobre-mi-texto p {
+    margin-bottom: 20px;
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* =========================
+CONTACTO
+========================= */
+
+.contacto {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 60px auto;
+    padding: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.contacto-informacion {
+    width: 50%;
+}
+
+.contacto-informacion h1 {
+    margin-bottom: 20px;
+
+    color: var(--marron-oscuro);
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+}
+
+.contacto-informacion > p {
+    margin-bottom: 35px;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.dato-contacto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.dato-contacto i {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--azul);
+    color: var(--blanco);
+
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.dato-contacto h3 {
+    margin-bottom: 3px;
+}
+
+.dato-contacto p {
+    color: #555555;
+}
+
+/* Formulario */
+
+.contacto-formulario {
+    width: 50%;
+    padding: 30px;
+
+    background-color: var(--blanco);
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contacto-formulario h2 {
+    margin-bottom: 25px;
+
+    color: var(--marron-oscuro);
+}
+
+.contacto-formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-formulario label {
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+    width: 100%;
+
+    margin-bottom: 20px;
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+
+    font-family: var(--fuente-textos);
+    font-size: 1rem;
+}
+
+.contacto-formulario textarea {
+    resize: vertical;
+}
+
+.contacto-formulario button {
+    padding: 13px;
+
+    background-color: var(--azul);
+    color: var(--blanco);
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contacto-formulario button:hover {
+    background-color: var(--azul-oscuro);
+}
+
+/* =========================
+DESTINOS NACIONALES
+========================= */
+
+.destinos {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 50px auto;
+    padding: 20px 40px;
+}
+
+.titulo-destinos {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.titulo-destinos h1 {
+    margin-bottom: 10px;
+
+    color: var(--marron-oscuro);
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+}
+
+.titulo-destinos p {
+    color: #555555;
+    font-size: 1.1rem;
+}
+
+/* Contenedor de tarjetas */
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* Tarjeta */
+
+.tarjeta-viaje {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--blanco);
+
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-viaje img {
+    width: 100%;
+    height: 210px;
+
+    display: block;
+    object-fit: cover;
+}
+
+.tarjeta-contenido {
+    min-height: 260px;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-contenido h2 {
+    margin-bottom: 12px;
+
+    color: var(--marron);
+    font-size: 1.4rem;
+}
+
+.tarjeta-contenido p {
+    margin-bottom: 25px;
+
+    color: #555555;
+    line-height: 1.6;
+}
+
+.tarjeta-contenido a {
+    width: 100%;
+    margin-top: auto;
+    padding: 11px;
+
+    color: var(--marron);
+
+    border: 2px solid var(--marron);
+    border-radius: 25px;
+
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.tarjeta-contenido a:hover {
+    background-color: var(--marron);
+    color: var(--blanco);
+}
+
+/* =========================
+PÁGINA INDIVIDUAL DEL DESTINO
+========================= */
+
+.detalle-destino {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Título */
+
+.encabezado-destino {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.volver-destinos {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    color: var(--marron);
+
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.volver-destinos i {
+    margin-right: 8px;
+}
+
+.volver-destinos:hover {
+    text-decoration: underline;
+}
+
+.encabezado-destino h1 {
+    margin-bottom: 10px;
+
+    color: var(--marron-oscuro);
+    font-family: var(--fuente-titulos);
+    font-size: 3rem;
+}
+
+.encabezado-destino p {
+    color: #555555;
+    font-size: 1.1rem;
+}
+
+/* Galería */
+
+.galeria-detalle {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 240px 240px;
+
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.galeria-detalle img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.galeria-detalle .foto-destacada {
+    grid-row: 1 / 3;
+}
+
+/* Descripción */
+
+.descripcion-destino {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    align-items: start;
+    gap: 45px;
+}
+
+.texto-destino h2 {
+    margin-bottom: 20px;
+
+    color: var(--marron-oscuro);
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+}
+
+.texto-destino p {
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+/* Tarjeta de información */
+
+.informacion-destino {
+    padding: 25px;
+
+    background-color: var(--blanco);
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+.informacion-destino h3 {
+    margin-bottom: 22px;
+    color: var(--marron);
+}
+
+.informacion-destino p {
+    margin-bottom: 18px;
+}
+
+.informacion-destino i {
+    width: 28px;
+    color: var(--azul);
+}
+
+.informacion-destino a {
+    display: block;
+
+    margin-top: 25px;
+    padding: 13px;
+
+    background-color: var(--azul);
+    color: var(--blanco);
+
+    border-radius: 25px;
+
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.informacion-destino a:hover {
+    background-color: var(--azul-oscuro);
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+    width: 100%;
+    padding: 20px;
+
+    background-color: var(--azul);
+    color: var(--blanco);
+
+    text-align: center;
+}
+
+/* =========================
+TABLETS
+========================= */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px 25px;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portada {
+        height: calc(100vh - 180px);
+    }
+}
+
+/* =========================
+CELULARES
+========================= */
+
+@media (max-width: 768px) {
+
+    .sobre-mi {
+        flex-direction: column;
+    }
+
+    .sobre-mi-imagen,
+    .sobre-mi-texto {
+        width: 100%;
+    }
+
+    .sobre-mi-imagen img {
+        height: 350px;
+    }
+
+    .sobre-mi-texto {
+        text-align: center;
+    }
+
+    .contacto {
+        flex-direction: column;
+    }
+
+    .contacto-informacion,
+    .contacto-formulario {
+        width: 100%;
+    }
+
+    .galeria-detalle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galeria-detalle img,
+    .galeria-detalle .foto-destacada {
+        height: 250px;
+    }
+
+    .descripcion-destino {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .logo,
+    .logo i {
+        font-size: 1.6rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul a {
+        font-size: 1rem;
+    }
+
+    .portada {
+        height: 65vh;
+    }
+
+    .portada-texto {
+        left: 5%;
+        right: 5%;
+    }
+
+    .portada-texto h1 {
+        font-size: 2.3rem;
+    }
+
+    .destinos {
+        padding: 20px;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-destino h1 {
+        font-size: 2.3rem;
+    }
+}
+/* Espacio entre las tarjetas y la galería */
+.contenedor-tarjetas {
+  margin-bottom: 50px;
+}
